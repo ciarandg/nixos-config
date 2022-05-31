@@ -1,0 +1,5 @@
+#!/bin/sh
+if [ $# -eq 0 ]; then echo "Exiting, no channel name supplied"; exit 1; fi
+notify-send -u normal "Loading $1..."
+mpv 'https://www.twitch.tv/'$1 ||
+	notify-send -u critical -t 3000 "$1 is down"

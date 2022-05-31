@@ -1,0 +1,2 @@
+#!/bin/sh
+pidof mpdas || $(notify-send "scrobbling down, restarting"; /usr/local/bin/mpdas)

@@ -1,0 +1,2 @@
+#!/bin/sh
+printf "pavucontrol\npatchage\ncomp58\n" | dmenu | sh

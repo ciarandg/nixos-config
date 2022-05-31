@@ -1,0 +1,16 @@
+#!/bin/sh
+# increments brightness by a given percentage (positive or negative)
+BPATH=/sys/class/backlight/intel_backlight
+MAX=$(cat $BPATH/max_brightness)
+NEWVAL=$(( ($1 * $MAX / 100) + $(cat $BPATH/brightness) ))
+
+if [ $NEWVAL -gt $MAX ]
+then
+	NEWVAL=$MAX
+elif [ $NEWVAL -lt 0 ]
+then
+	NEWVAL=0
+fi
+
+echo $NEWVAL | sudo tee $BPATH/brightness
+kill -35 $(pidof dwmblocks)

@@ -1,0 +1,3 @@
+#!/bin/sh
+BPATH=/sys/class/backlight/intel_backlight
+echo $(( $1 * $(cat $BPATH/max_brightness) / 100 )) | sudo tee $BPATH/brightness

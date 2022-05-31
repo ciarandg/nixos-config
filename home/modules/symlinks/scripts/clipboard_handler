@@ -1,0 +1,10 @@
+#!/bin/sh
+LINK=$(xclip -o)
+
+if [ $(echo $LINK | grep "^magnet:?") ]; then
+  transmission-remote -a "$LINK" &&
+  notify-send "Added magnet link" "$LINK" || notify-send -u critical "Invalid magnet link" "$LINK"
+else
+  notify-send "Loading video..." "$LINK" &
+  mpv "$LINK" || notify-send -u critical "Failed to load video" "$LINK"
+fi

@@ -1,0 +1,10 @@
+${{
+  clear; tput cup $(($(tput lines)/3)); tput bold
+  set -f
+  clear; echo "Copy to where?"
+  dest="$(cut -d'	' -f2- ${XDG_CONFIG_HOME:-$HOME/.config}/shell/bm-dirs | fzf | sed 's|~|$HOME|' )" &&
+  for x in $fx; do
+    eval cp -ivr \"$x\" \"$dest\"
+  done &&
+  notify-send "📋 File(s) copied." "File(s) copies to $dest."
+}}

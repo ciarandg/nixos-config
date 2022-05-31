@@ -1,0 +1,2 @@
+#!/bin/sh
+twitch $(printf "chapotraphouse\nhasanabi\nrubberninja\nnoelmiller\nsykkuno\nhuntychan\ntrueanon\nstavvybaby" | dmenu)

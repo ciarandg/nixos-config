@@ -1,0 +1,17 @@
+#!/bin/sh
+trim() {
+  cat /dev/stdin | ag wireguard | cut -d " " -f 3 | cut -d "." -f 1
+}
+
+ESCAPE=" local"
+VPN_LIST=$(systemctl list-units --all | trim)
+
+CHOICE=$(echo -e "$ESCAPE\n$VPN_LIST" | dmenu)
+if [ "$CHOICE" == "$ESCAPE" ]; then
+  ACTIVE=$(systemctl list-units --state=active | trim)
+  sudo systemctl stop $ACTIVE &&
+    notify-send "Disabled $ACTIVE"
+else
+  sudo systemctl start $CHOICE &&
+    notify-send "Enabled $CHOICE"
+fi

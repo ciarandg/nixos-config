@@ -1,0 +1,4 @@
+#!/bin/sh
+if [ $# -eq 0 ]; then echo "Must provide sink/source name"; exit 1; fi
+pactl load-module module-jack-source client_name="$1_Source"
+pactl load-module module-jack-sink client_name="$1_Sink"

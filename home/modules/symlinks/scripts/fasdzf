@@ -1,0 +1,2 @@
+#!/bin/sh
+fasd -dl | grep -iv cache | fzf 2>/dev/tty | sed 's/\\/\\\\/g;s/"/\\"/g'
