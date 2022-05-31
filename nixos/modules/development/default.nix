@@ -50,6 +50,7 @@ in {
       cabal2nix
       haskell-language-server
       ghc
+      stack
 
       faust
     ];
