@@ -43,6 +43,8 @@ in {
 
       poetry
       black
+      python
+      python3
 
       cabal-install
       cabal2nix
