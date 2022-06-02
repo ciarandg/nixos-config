@@ -56,4 +56,10 @@
   networking.networkmanager.enable = true;
   networking.useDHCP = false;
   services.tailscale.enable = true;
+
+  services.transmission = {
+    enable = true;
+    user = "ciaran";
+    home = "/home/ciaran";
+  };
 }

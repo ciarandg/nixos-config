@@ -78,11 +78,5 @@ in {
       statix
       xclip
     ];
-
-    services.transmission = {
-      enable = true;
-      user = "ciaran";
-      home = "/home/ciaran";
-    };
   };
 }
