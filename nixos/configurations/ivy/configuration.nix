@@ -10,6 +10,9 @@
   ];
 
   system.stateVersion = "20.09";
+
+  networking.hostName = "ivy";
+
   ciaran.core.enable = true;
   ciaran.desktop = {
     enable = true;

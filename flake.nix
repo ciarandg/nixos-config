@@ -26,7 +26,7 @@
     home-manager,
     ...
   } @ inputs: let
-    system = "x86_64-linux";
+    system = "aarch64-linux";
   in {
     nixosConfigurations = import ./nixos/configurations inputs system;
     homeConfigurations = import ./home/configurations inputs system;

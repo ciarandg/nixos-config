@@ -21,8 +21,6 @@ in {
       experimental-features = nix-command flakes
     '';
 
-    networking.hostName = "ivy";
-
     users.mutableUsers = false;
     security.sudo.wheelNeedsPassword = false;
 
