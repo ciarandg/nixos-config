@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  secrets,
   ...
 }: {
   imports = [
@@ -33,4 +34,5 @@
   services.tailscale.enable = true;
 
   services.sshd.enable = true;
+  users.users.ciaran.openssh.authorizedKeys.keyFiles = secrets.ssh.authorizedKeys."ciaran@slate";
 }

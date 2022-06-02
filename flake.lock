@@ -302,11 +302,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1653901529,
-        "narHash": "sha256-yrNByfh1V2zrpPjCSiEwS+GYjzo0VyJ9zBa1TMXLQB8=",
+        "lastModified": 1654146342,
+        "narHash": "sha256-qjRR94VeNUc9mSFw7xN1xZHlYsbgPOoxOBoreGeb/7o=",
         "ref": "refs/heads/master",
-        "rev": "6e4604ca0b64907a18a409ab51767e7851521d5a",
-        "revCount": 5,
+        "rev": "c75e73d48e689f8aa2921abc98f12f476b92058e",
+        "revCount": 8,
         "type": "git",
         "url": "ssh://git@github.com/ciarandg/secrets.git"
       },
