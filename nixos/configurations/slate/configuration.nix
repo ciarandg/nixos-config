@@ -6,6 +6,7 @@
 }: {
   imports = [
     ../../modules
+    ./jellyfin
   ];
 
   system.stateVersion = "22.05";
@@ -19,10 +20,6 @@
   ciaran.development.enable = false;
   ciaran.users.enable = true;
   ciaran.hostnames.enable = true;
-
-  # Battery
-  services.upower.enable = true;
-  services.tlp.enable = true;
 
   boot.loader.grub.enable = false;
   boot.loader.generic-extlinux-compatible.enable = true;
