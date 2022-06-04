@@ -6,7 +6,6 @@
 }: {
   imports = [
     ../../modules
-    ./jellyfin
   ];
 
   system.stateVersion = "22.05";
