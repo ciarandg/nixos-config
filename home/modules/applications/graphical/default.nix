@@ -7,6 +7,7 @@
   imports = [
     ./chromium
     ./idea
+    ./latex
     ./lutris
     ./rofi
   ];

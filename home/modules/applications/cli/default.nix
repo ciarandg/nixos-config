@@ -9,7 +9,6 @@
     ./gdb
     ./git
     ./htop
-    ./latex
     ./lf
     ./ncmpcpp
     ./neovim
