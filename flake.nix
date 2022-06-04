@@ -29,7 +29,7 @@
     system = "aarch64-linux";
   in {
     nixosConfigurations = import ./nixos/configurations inputs;
-    homeConfigurations = import ./home/configurations inputs system;
+    homeConfigurations = import ./home/configurations inputs;
     checks.${system} = import ./checks inputs system;
   };
 }
