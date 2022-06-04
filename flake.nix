@@ -28,7 +28,7 @@
   } @ inputs: let
     system = "aarch64-linux";
   in {
-    nixosConfigurations = import ./nixos/configurations inputs system;
+    nixosConfigurations = import ./nixos/configurations inputs;
     homeConfigurations = import ./home/configurations inputs system;
     checks.${system} = import ./checks inputs system;
   };

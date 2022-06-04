@@ -1,4 +1,4 @@
-{self, ...} @ inputs: system: {
-  ivy = import ./ivy inputs system;
-  slate = import ./slate inputs system;
+{self, ...} @ inputs: {
+  ivy = import ./ivy inputs;
+  slate = import ./slate inputs;
 }

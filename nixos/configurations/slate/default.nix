@@ -3,9 +3,9 @@
   nixpkgs,
   nixos-hardware,
   ...
-} @ inputs: system:
+} @ inputs:
 nixpkgs.lib.nixosSystem {
-  inherit system;
+  system = "aarch64-linux";
   specialArgs = inputs;
   modules = [
     ./configuration.nix
