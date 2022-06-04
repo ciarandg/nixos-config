@@ -43,11 +43,14 @@ in {
 
       poetry
       black
+      python
+      python3
 
       cabal-install
       cabal2nix
       haskell-language-server
       ghc
+      stack
 
       faust
     ];
