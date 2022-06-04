@@ -21,8 +21,6 @@ in {
       experimental-features = nix-command flakes
     '';
 
-    networking.hostName = "ivy";
-
     users.mutableUsers = false;
     security.sudo.wheelNeedsPassword = false;
 
@@ -80,11 +78,5 @@ in {
       statix
       xclip
     ];
-
-    services.transmission = {
-      enable = true;
-      user = "ciaran";
-      home = "/home/ciaran";
-    };
   };
 }

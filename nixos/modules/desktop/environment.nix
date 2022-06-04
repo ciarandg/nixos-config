@@ -5,6 +5,7 @@
   ...
 }:
 with lib; let
+  cfg = config.ciaran.desktop;
   env = config.ciaran.desktop.environment;
   envSwitch = ifDwm: ifXmonad:
     if env == "dwm"
@@ -19,7 +20,7 @@ in {
     default = "dwm";
   };
 
-  config = {
+  config = mkIf cfg.enable {
     services.xserver = {
       enable = true;
       layout = "us";

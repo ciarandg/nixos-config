@@ -25,11 +25,10 @@
     self,
     home-manager,
     ...
-  } @ inputs: let
-    system = "x86_64-linux";
-  in {
-    nixosConfigurations = import ./nixos/configurations inputs system;
-    homeConfigurations = import ./home/configurations inputs system;
-    checks.${system} = import ./checks inputs system;
+  } @ inputs: {
+    nixosConfigurations = import ./nixos/configurations inputs;
+    homeConfigurations = import ./home/configurations inputs;
+    checks."x86_64-linux" = import ./checks inputs "x86_64-linux";
+    checks."aarch64-linux" = import ./checks inputs "aarch64-linux";
   };
 }

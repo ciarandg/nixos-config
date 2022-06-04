@@ -1,4 +1,9 @@
-{home-manager, secrets, comp58, ...}: username: system:
+{
+  home-manager,
+  secrets,
+  comp58,
+  ...
+}: username: system:
 home-manager.lib.homeManagerConfiguration {
   configuration = {
     nixpkgs.config.allowUnfreePredicate = pkg: true;

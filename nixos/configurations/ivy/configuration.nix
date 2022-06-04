@@ -10,6 +10,9 @@
   ];
 
   system.stateVersion = "20.09";
+
+  networking.hostName = "ivy";
+
   ciaran.core.enable = true;
   ciaran.desktop = {
     enable = true;
@@ -53,4 +56,10 @@
   networking.networkmanager.enable = true;
   networking.useDHCP = false;
   services.tailscale.enable = true;
+
+  services.transmission = {
+    enable = true;
+    user = "ciaran";
+    home = "/home/ciaran";
+  };
 }
