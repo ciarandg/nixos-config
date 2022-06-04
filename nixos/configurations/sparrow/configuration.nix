@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, secrets, ... }:
 
 {
   imports =
@@ -89,7 +89,7 @@
     home = "/home/ciaran";
     description = "Ciaran De Groot";
     extraGroups = [ "wheel" "networkmanager" ];
-    openssh.authorizedKeys.keyFiles = [ ./ciaran.pub ];
+    openssh.authorizedKeys.keyFiles = secrets.ssh.authorizedKeys."ciaran@sparrow";
   };
 
   # Some programs need SUID wrappers, can be configured further or are
