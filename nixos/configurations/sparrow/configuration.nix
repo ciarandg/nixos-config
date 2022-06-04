@@ -29,6 +29,7 @@
   networking.usePredictableInterfaceNames = false;
   networking.useDHCP = false;
   networking.interfaces.eth0.useDHCP = true;
+  services.tailscale.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
