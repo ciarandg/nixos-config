@@ -30,4 +30,12 @@ in {
       ./slate/hardware-configuration.nix
     ];
   };
+  sparrow = mkSystem {
+    system = "x86_64-linux";
+    specialArgs = inputs;
+    modules = [
+      ./sparrow/configuration.nix
+      ./sparrow/hardware-configuration.nix
+    ];
+  };
 }
