@@ -19,7 +19,7 @@ in {
   config = mkIf cfg.enable {
     users.users.ciaran = {
       isNormalUser = true;
-      extraGroups = ["wheel" "adm" "networkmanager" "audio" "libvirtd" "docker"];
+      extraGroups = ["wheel" "adm" "networkmanager" "audio" "libvirtd" "docker" "fuse"];
       hashedPassword = secrets.hashedPasswords.ciaran;
       shell = pkgs.zsh;
     };
