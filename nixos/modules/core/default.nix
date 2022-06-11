@@ -78,6 +78,7 @@ in {
       statix
       xclip
       s3fs
+      rclone
     ];
   };
 }
