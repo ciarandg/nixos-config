@@ -2,12 +2,18 @@ inputs: let
   username = "ciaran";
   systems = {
     x86 = "x86_64-linux";
+    arm64 = "aarch64-linux";
   };
   configs = [
     {
       inherit username;
       host = "ivy";
       system = systems.x86;
+    }
+    {
+      inherit username;
+      host = "slate";
+      system = systems.arm64;
     }
     {
       inherit username;
