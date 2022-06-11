@@ -29,6 +29,10 @@
   networking.interfaces.wlan0.useDHCP = true;
   services.tailscale.enable = true;
 
-  services.sshd.enable = true;
+  services.openssh = {
+    enable = true;
+    permitRootLogin = "no";
+    passwordAuthentication = false;
+  };
   users.users.ciaran.openssh.authorizedKeys.keyFiles = secrets.ssh.authorizedKeys."ciaran@slate";
 }
