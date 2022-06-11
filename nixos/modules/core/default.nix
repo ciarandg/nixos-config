@@ -77,6 +77,7 @@ in {
       alejandra
       statix
       xclip
+      s3fs
     ];
   };
 }
