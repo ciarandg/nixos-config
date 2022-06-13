@@ -44,6 +44,9 @@
     sysstat
   ];
 
+  # Useful for mounting volumes with rclone
+  programs.fuse.userAllowOther = true;
+
   services.openssh = {
     enable = true;
     permitRootLogin = "no";
