@@ -15,6 +15,8 @@
   home.packages = with pkgs; [
     # Media
     mpv
+    jellyfin-mpv-shim
+    jellyfin-media-player
     syncplay
     steam
     calibre
