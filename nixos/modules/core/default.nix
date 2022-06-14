@@ -79,6 +79,7 @@ in {
       xclip
       s3fs
       rclone
+      caddy
     ];
   };
 }
