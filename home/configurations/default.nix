@@ -12,6 +12,11 @@ inputs: let
     }
     {
       inherit username;
+      host = "onyx";
+      system = systems.x86;
+    }
+    {
+      inherit username;
       host = "slate";
       system = systems.arm64;
     }
