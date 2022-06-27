@@ -14,7 +14,10 @@
   networking.hostId = "2e6f54c6";
 
   ciaran.core.enable = true;
-  ciaran.desktop.enable = true;
+  ciaran.desktop = {
+    enable = true;
+    environment = "dwm";
+  };
   ciaran.audio.enable = true;
   ciaran.development.enable = true;
   ciaran.users.enable = true;
