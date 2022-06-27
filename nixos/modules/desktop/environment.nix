@@ -22,7 +22,8 @@ in {
 
   config = mkIf cfg.enable {
     services.xserver = let
-      session = envSwitch "none+dwm" "none+xmonad"; in {
+      session = envSwitch "none+dwm" "none+xmonad";
+    in {
       enable = true;
       layout = "us";
       xkbOptions = "caps:escape";
