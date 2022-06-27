@@ -35,4 +35,5 @@
     permitRootLogin = "no";
     passwordAuthentication = false;
   };
+  users.users.ciaran.openssh.authorizedKeys.keyFiles = secrets.ssh.authorizedKeys."ciaran@onyx";
 }
