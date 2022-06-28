@@ -6,6 +6,7 @@
 } @ inputs: {
   imports = [
     ./chromium
+    ./discord
     ./idea
     ./latex
     ./lutris
@@ -33,7 +34,6 @@
     slack
     libreoffice
     element-desktop
-    discord
 
     # Dev
     vscode
