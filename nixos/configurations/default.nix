@@ -22,6 +22,14 @@ in {
       nixos-hardware.nixosModules.lenovo-thinkpad-x1-extreme-gen2
     ];
   };
+  onyx = mkSystem {
+    system = "x86_64-linux";
+    specialArgs = inputs;
+    modules = [
+      ./onyx/configuration.nix
+      ./onyx/hardware-configuration.nix
+    ];
+  };
   slate = mkSystem {
     system = "aarch64-linux";
     specialArgs = inputs;

@@ -21,13 +21,19 @@ in {
   };
 
   config = mkIf cfg.enable {
-    services.xserver = {
+    services.xserver = let
+      session = envSwitch "none+dwm" "none+xmonad";
+    in {
       enable = true;
       layout = "us";
       xkbOptions = "caps:escape";
       displayManager = {
         lightdm = {
           enable = true;
+          extraConfig = ''
+            [SeatDefaults]
+            user-session=${session}
+          '';
           greeters.mini = {
             enable = true;
             user = "ciaran";
@@ -41,7 +47,7 @@ in {
           };
           background = ./wallpapers/login.png;
         };
-        defaultSession = envSwitch "none+dwm" "none+xmonad";
+        defaultSession = session;
         sessionCommands = ''
           light-locker --lock-on-suspend --lock-on-lid &
           feh --bg-scale ${./wallpapers/desktop.png}
