@@ -18,5 +18,6 @@ home-manager.lib.homeManagerConfiguration {
   stateVersion = "21.03";
   extraSpecialArgs = {
     inherit secrets;
+    isLaptop = false;
   };
 }

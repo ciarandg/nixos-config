@@ -1,7 +1,17 @@
-_: {
+{
+  self,
+  isLaptop,
+  ...
+}: {
   services.dwm-status = {
     enable = true;
-    order = ["backlight" "battery" "cpu_load" "network" "time"];
+    order =
+      (
+        if isLaptop
+        then ["backlight" "battery"]
+        else []
+      )
+      ++ ["cpu_load" "network" "time"];
     extraConfig = {
       separator = " / ";
       audio = {
