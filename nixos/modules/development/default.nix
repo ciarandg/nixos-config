@@ -53,6 +53,10 @@ in {
       stack
 
       faust
+
+      kubernetes
+      kubectl
+      minikube
     ];
   };
 }
