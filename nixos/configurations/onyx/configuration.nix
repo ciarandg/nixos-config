@@ -6,6 +6,7 @@
 }: {
   imports = [
     ../../modules
+    ./filesystems
   ];
 
   system.stateVersion = "22.05";
