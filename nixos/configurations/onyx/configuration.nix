@@ -30,6 +30,7 @@
   # Network
   networking.networkmanager.enable = true;
   services.tailscale.enable = true;
+  networking.firewall.checkReversePath = "loose";
 
   services.openssh = {
     enable = true;
